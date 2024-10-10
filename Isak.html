@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D Ucapan Ulang Tahun :)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file for styles -->
+</head>
+<body>
+    <!-- Section 1: Photo 1 -->
+    <div id="section1" class="section container text-center">
+        <h1 class="text-3d">Hai, hari ini ulang tahunku</h1>
+        <div class="image-container">
+            <img src="C:\Users\Lenovo\Documents\birthday\birthday Isak\Image\1.jpeg" alt="Birthday Image" class="img-fluid">
+        </div>
+        <div class="button-container">
+            <a href="#" class="button btn" onclick="showSection('section2')">Klik di sini dong sayangkuuuu</a>
+        </div>
+    </div>
+
+    <!-- Section 2: Photo 2 -->
+    <div id="section2" class="section container text-center d-none">
+        <h2 class="text-3d">Ucapan Berkat</h2>
+        <div class="image-container">
+            <img src="C:\Users\Lenovo\Documents\birthday\birthday Isak\Image\2.jpeg"
+            alt="Foto Ucapan" 
+                 onclick="showModal('Sehat Sukses selalu cintaku Nina berharap banyak dari Isak, kita punya banyak wish list tetap sehat bukan hanya keluarga bukan hanya Nina tapi banyak orang berharap juga sama Isak. Nina tidak tahu apa yang menjadi Isak punya pergumulan tapi Nina selalu minta sama Tuhan tolong mudahkan setiap proses biar apa yang Tuhan kehendaki itu yang terjadi. Nina akan selalu dukung Isak apapun yang Isak lakukan dan dalam situasi apapun Nina akan selalu support Isak <br>Kiranya Allah sumber berkat itu selalu memudahkan segala sesuatu yang Isak usahakan 🤍🌹<br>Segala perkara ku dapat ku tanggung di dalam Dia.<br>(Filipi 4:13)')">
+        </div>
+        <div class="button-container">
+            <a href="#" class="button btn" onclick="showSection('section3')">Disini cintakuuuu</a>
+        </div>
+    </div>
+
+    <!-- Section 3: Photos 3, 4, and 5 -->
+    <div id="section3" class="section container text-center d-none">
+        <h1 class="text-3d">Foto Ulang Tahun</h1>
+        <div class="image-container">
+            <img src="C:\Users\Lenovo\Documents\birthday\birthday Isak\Image\3.jpeg" alt="Foto 1" 
+                 onclick="showModal('Semoga nanti kalau kesini lagi <jayapura city> orangnya masih tetap Nina')">
+            <img src="C:\Users\Lenovo\Documents\birthday\birthday Isak\Image\4.jpeg" alt="Foto 2" 
+                 onclick="showModal('Foto ini diambil 27 September 2023 sebenarnya saat itu Nina tidak yakin kalau nanti hubungan ini akan berlanjut sampai saat ini, Nina pikir saja oke sudah Nina balik ke Surabaya nanti sudah tidak akan ada komunikasi lagi soalnya Nina tidak begitu yakin Nina bisa komitmen tidak, karna saat itu Nina rasa seperti digantung, tapi Puji Tuhan sudah sampai saat ini Tuhan masih izinkan kita bersama dan bukan hanya saat ini tapi sampai nanti nikah sampai nanti punya anak sampai selama Aminnn')">
+            <img src="C:\Users\Lenovo\Documents\birthday\birthday Isak\Image\5.jpeg" alt="Foto 3" 
+                 onclick="showModal('Apapun badainya jangan pernah ganti Nina')">
+        </div>
+        <div class="button-container">
+            <a href="#" class="button btn" onclick="showSection('section1')">Kembali ya Isakkuu</a>
+        </div>
+    </div>
+
+    <!-- Modal that is manipulated by JavaScript -->
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content" id="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file for functionality -->
+    <script>
+        // Function to show a specific section and hide others
+        function showSection(sectionId) {
+            // Get all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.add('d-none'); // Hide all sections
+            });
+            // Show the selected section
+            document.getElementById(sectionId).classList.remove('d-none');
+        }
+
+        // Function to show the modal with a message
+        function showModal(message) {
+            const modalContent = document.querySelector('#modal-content p');
+            modalContent.innerHTML = message; // Set the modal message
+            document.querySelector('.modal').style.display = 'flex'; // Show the modal
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            document.querySelector('.modal').style.display = 'none'; // Hide the modal
+        }
+    </script>
+</body>
+</html>
